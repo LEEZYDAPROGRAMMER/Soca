@@ -1,0 +1,35 @@
+
+.mycard {
+    background-color:#0ABFB9;
+   color:#fff;
+   font-family: Helvetica;
+  }
+  .mycardMenu {
+    background-color:#0ABFB9;
+   color:#fff;
+   font-family: Helvetica;
+   right:-1270px;
+   
+  
+  }
+  .headerImage {
+    background-image: url('C:\Users\CodeTribe\soca\src\assets\img\soccer (8).png');
+    background-size: cover;
+
+    width: 45px;
+    height: 45px;
+  }
+.manDiv
+{
+    background-color:#fff;
+    color:#0ABFB9;
+   font-family: Helvetica;
+
+}
+.butt
+{
+   
+    color:#0ABFB9;
+    font-family: Helvetica;
+
+}

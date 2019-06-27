@@ -1,0 +1,68 @@
+
+
+  
+  <!--stomach .-->
+  
+  <mat-card class="mycard2">
+    <mat-card-content>
+    <form [formGroup]="personForm">
+      <!--name .-->
+      <p class="re" *ngIf="!personForm.valid">*required</p>
+  
+      <mat-form-field class="re" hintLabel="must be letters only">
+        <input [(ngModel)]="name"  matInput placeholder="name" formControlName="name"  required/>
+      </mat-form-field><br/>
+  
+       <!--surname .-->
+       <p class="re" *ngIf="!personForm.valid">*required</p>
+  
+       <mat-form-field class="re" hintLabel="must be letters only">
+         <input [(ngModel)]="surname"  matInput placeholder="Surname" formControlName="surname" required/>
+       </mat-form-field><br/>
+  
+        <!--Age .-->
+      <p class="re" *ngIf="!personForm.valid">*required</p>
+  
+      <mat-form-field class="re" hintLabel="must be 3 characters">
+        <input #input maxlength="3" [(ngModel)]="age" matInput placeholder="Age" formControlName="age"  required/>
+      </mat-form-field><br/>
+  
+       <!--Email .-->
+       <p class="re" *ngIf="!personForm.valid">*required  </p>
+  
+       <mat-form-field class="re" hintLabel="must be an email">
+         <input [(ngModel)]="email"  matInput placeholder="email" formControlName="email"  required/>
+       </mat-form-field><br/>
+  
+        <!--Phone number .-->
+        <p class="re" *ngIf="!personForm.valid">*required </p>
+  
+        <mat-form-field class="re" hintLabel="must be 10 characters">
+          <input #input maxlength="10" #input minlength="10" [(ngModel)]="cellno"  matInput placeholder="cellphone number" formControlName="cellno"  required/>
+        </mat-form-field><br/>
+  
+  
+        
+  
+   <!--save information button .-->
+     <button class="butt" mat-raised-button color="primary" [disabled]="!personForm.valid"  (click)="addUser()"> Save </button>
+    </form>
+  </mat-card-content>
+  </mat-card>
+  
+  
+  <mat-card class="disCard" *ngIf="saved">
+      <mat-card-header>
+          <mat-card-title> Welcome To Soca !</mat-card-title>
+      </mat-card-header>
+  <!--user information .-->
+  <ul  *ngFor="let infos of userInfo" >
+   <li>Name: {{infos.name}}</li>
+   <li>Surname: {{infos.surname}}</li>
+   <li>Age:  {{infos.age}}</li>
+   <li>Email: {{infos.email}}</li>
+   <li> Cellphone No: {{infos.cellno}}</li>
+       
+  </ul>
+  </mat-card>
+  <!--footer .-->
